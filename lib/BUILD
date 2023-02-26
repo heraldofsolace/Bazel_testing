@@ -1,0 +1,13 @@
+py_library(
+    name = "lib_prime",
+    srcs = ["prime.py"],
+    visibility = ["//visibility:public"]
+)
+
+py_test(
+    name = "test_prime",
+    srcs = [ "test_prime.py" ],
+    deps = [
+        "//lib:lib_prime"
+    ]
+)
